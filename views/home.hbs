@@ -1,0 +1,72 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link
+      href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css'
+      rel='stylesheet'
+    />
+    <script
+      src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js'
+    ></script>
+    <title>{{title}}</title>
+  
+  </head>
+  <body>
+   <style>
+    body {
+  background-image: url('https://thumbs.dreamstime.com/b/web-development-concept-blog-wall-background-painted-blue-text-black-brick-hand-drawn-site-icons-109725913.jpg');;
+}
+   </style>
+    <nav class='navbar navbar-expand-lg bg-dark navbar-dark'>
+      <div class='container-fluid'>
+        <a class='navbar-brand' href='/'>yash's blogs
+        <button
+          class='navbar-toggler'
+          type='button'
+          data-bs-toggle='collapse'
+          data-bs-target='#navbarTogglerDemo02'
+          aria-controls='navbarTogglerDemo02'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
+        >
+          <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='collapse navbar-collapse' id='navbarTogglerDemo02'>
+          <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
+            <li class='nav-item'>
+              <a class='nav-link active' aria-current='page' href='/'>Home</a>
+            </li>
+          </ul>
+          <ul class='navbar-nav mb-2 mb-lg-0 d-flex'>
+            <li class='nav-item'>
+              <a class='nav-link' href='/blogs'>Blogs</a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link' href='/auth/login'>Login</a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link' href='/auth/signup'>Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <br />
+      {{#if isData}}
+        <h1 class='text-center'>
+          hello
+          {{data.firstName}}
+          {{data.lastName}}
+          !!!
+        </h1>
+      {{else}}
+        <h1 class="text-center , text-white">
+          hello Guest !
+        </h1>
+      {{/if}}
+    </main>
+  </body>
+</html>
